@@ -1,0 +1,16 @@
+{
+    "node": true,
+    "bitwise": true,
+    "eqeqeq": true,
+    "freeze": true,
+    "futurehostile": true,
+    "latedef": "nofunc",
+    "noarg": true,
+    "nocomma": true,
+    "nonbsp": true,
+    "nonew": true,
+    "shadow": "inner",
+    "sub": true,
+    "undef": true,
+    "unused": "vars"
+}

@@ -1,0 +1,38 @@
+{
+  "preset": "google",
+  "validateIndentation": 4,
+  "validateQuoteMarks": {
+    "mark": "'",
+    "escape": true
+  },
+  "disallowSpacesInFunctionExpression": null,
+  "disallowSpacesInAnonymousFunctionExpression": null,
+  "disallowMultipleLineBreaks": null,
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true,
+    "beforeOpeningCurlyBrace": true
+  },
+  "maximumLineLength": {
+    "value": 110,
+    "allExcept": ["regex", "comments"]
+  },
+  "excludeFiles": [
+    "coverage",
+    "configure-for-aws.js",
+    "get_last_coverage.js",
+    "update_last_coverage.js",
+    "tests"
+  ],
+  "requireCurlyBraces": {
+    "keywords": ["if", "else"],
+    "allExcept": ["return", "break", "continue"]
+  },
+  "requireCamelCaseOrUpperCaseIdentifiers": {
+    "ignoreProperties": true
+  },
+  "disallowMultipleVarDecl": {
+    "allExcept": ["undefined"]
+  },
+  "jsDoc": false,
+  "requireSpaceAfterComma": true
+}
