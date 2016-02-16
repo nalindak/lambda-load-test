@@ -1,13 +1,37 @@
 # lambda-load-test
 Lambda based load testing utility
 
-- How to
-
-1. create dynamodb table
-2. get api endpoint and loadtest details
 ```sh
-load-test --endpoint [ENDPOINT] --concurrency [NUMBER] --hits [NUMBER] --expeced-result [body.json] --output [OUTPUT.csv]
+npm install lambda-load-test
+touch test.js
 ```
-3. run test
-4. download results
-5. clean up tasks
+
+add following content to test.js
+
+```js
+'use strict';
+
+var LoadTest = require('lambda-load-test');
+
+var loadTest = new LoadTest({
+    method: 'POST',
+    applicationType: 'application/json',
+    header: {
+        'x-api-key': 'xxxxxKeyxxxxx'
+    },
+    body: {
+        "test": "this is a test"
+    },
+    endpoint: 'https://something.com/something',
+    requests: 1000,
+    concurrency: 10
+});
+
+loadTest();
+```
+
+Then run the test,
+
+```sh
+AWS_PROFILE={PROFILE} node test.js
+```
